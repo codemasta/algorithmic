@@ -9,12 +9,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Tests {
 	@Test
-	public void multiplicationOfZeroIntegersShouldReturnZero() {
+	public void test1() {
 		final ArrayList<Integer> x = toArrayList(-7, -13);
 		final ArrayList<Integer> y = toArrayList(1, -5);
 
-		final int i = new Traversal().coverPoints(x, y);
-		assertEquals(i, 6);
+		assertEquals(new Traversal().coverPoints(x, y), 6);
+		assertEquals(new Calculation().coverPoints(x, y), 6);
 	}
 
+	@Test
+	public void test2() {
+		final ArrayList<Integer> x = toArrayList(4, 8, -7, -5, -13, 9, -7, 8);
+		final ArrayList<Integer> y = toArrayList(4, -15, -10, -3, -13, 12, 8, -8);
+
+		assertEquals(new Traversal().coverPoints(x, y), 108);
+		assertEquals(new Calculation().coverPoints(x, y), 108);
+	}
 }
