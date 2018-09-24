@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Solution {
 	public String largestNumber(final List<Integer> list) {
+		// Check if the input is correct
 		if (list == null || list.isEmpty()) {
 			return "0";
 		}
@@ -14,13 +15,16 @@ public class Solution {
 
 		int index = 0;
 
+		// Add each element in a Container type
 		for (int n : list) {
 			containers[index] = new Container(n);
 			index++;
 		}
 
+		// Sort the array
 		Arrays.sort(containers);
 
+		// If the first element is 0, it means we have to simply return 0
 		if ("0".equals(containers[0].number)) {
 			return "0";
 		}
@@ -44,6 +48,7 @@ public class Solution {
 			String first = this.number + c.number;
 			String second = c.number + this.number;
 
+			// Comparison strategy described
 			return second.compareTo(first);
 		}
 	}
