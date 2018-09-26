@@ -23,4 +23,22 @@ public class Tests {
 				3
 		));
 	}
+
+	@Test
+	public void test3() {
+		assertEquals(false, new Simple().hotel(
+				toArrayList(1, 3, 5),
+				toArrayList(2, 6, 8),
+				1
+		));
+	}
+
+	@Test
+	public void test4() {
+		assertEquals(true, new Simple().hotel(
+				toArrayList(1, 1, 1),
+				toArrayList(2, 3, 2),
+				3
+		));
+	}
 }
