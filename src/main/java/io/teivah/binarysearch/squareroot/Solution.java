@@ -3,7 +3,7 @@ package io.teivah.binarysearch.squareroot;
 public class Solution {
 	public int sqrt(int a) {
 		long low = 1, high = a;
-		System.out.println(Integer.MAX_VALUE);
+
 		while (low <= high) {
 			long mid = (high + low) / 2;
 			long n = mid * mid;
