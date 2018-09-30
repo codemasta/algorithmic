@@ -6,11 +6,11 @@ public class Solution {
 
 		while (low <= high) {
 			long mid = (high + low) / 2;
-			long n = mid * mid;
+			long current = mid * mid;
 
-			if (n == a) {
+			if (current == a) {
 				return (int) mid;
-			} else if (n < a) {
+			} else if (current < a) {
 				low = mid + 1;
 			} else {
 				high = mid - 1;
