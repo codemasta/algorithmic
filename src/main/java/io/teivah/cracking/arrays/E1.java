@@ -1,8 +1,10 @@
 package io.teivah.cracking.arrays;
 
 public class E1 {
-  public boolean e1(String s) {
+  public boolean isUnique(String s) {
     // If ASCII => 128 characters
+
+    // Use a bit vector
     long[] vector = new long[2];
     final int length = s.length();
     for (int i = 0; i < length; i++) {
@@ -15,9 +17,7 @@ public class E1 {
       }
     }
 
-    System.out.println(Long.toBinaryString(vector[0]));
-    System.out.println(Long.toBinaryString(vector[1]));
-
+    // Check all bits are set to 1
     return check(vector[0]) && check(vector[1]);
   }
 

@@ -8,11 +8,11 @@ public class E1Test {
   @Test
   public void test() {
     final E1 e = new E1();
-    char[] c = new char[128];
-    for (int i = 0; i < 125; i++) {
+    char[] c = new char[127];
+    for (int i = 0; i < 127; i++) {
       c[i] = (char) i;
     }
-    boolean got = e.e1(new String(c));
+    boolean got = e.isUnique(new String(c));
     assertTrue(got);
   }
 }
